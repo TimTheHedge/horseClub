@@ -1,0 +1,20 @@
+//Presets
+//Colors
+$colLightGrey: #EFEFEF;
+$colDarkGrey: #55565B;
+$colBlack: #202020;
+$colYellow: #FDE724;
+$colGreen: #008139;
+//Presets End
+
+//Wrapers
+.wrapper-1170{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+//
+@import "_reset.scss";
+@import "_fonts.scss";
+
+@import "_header.scss";
+

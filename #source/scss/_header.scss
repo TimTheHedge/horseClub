@@ -1,0 +1,66 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 15px;
+    color: $colBlack;
+
+    margin-top: 9px;
+    
+    .logo{
+        align-self: flex-start;
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+
+        &__items{
+            display: flex;
+            justify-content: space-between;
+            width: 428px;
+
+            margin-right: 58px;
+        }
+        &__link{
+            color: $colBlack;
+            text-transform: uppercase;
+        }
+        .phone-number{
+            display: block;
+            align-self: flex-end;
+            
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            color: $colBlack;
+
+            &::before{
+                content: "";
+                background: url(../img/header/phone-logo.svg) no-repeat 0 0/contain;
+                display: inline-block;
+                height: 16px;
+                width: 16px;
+                margin-right: 10px;
+            }
+            &::after{
+                content: "Ежедневно 9:00 – 22:00";
+                display: block;
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 15px;
+                color: $colLightGrey;
+
+                margin-top: 8px;
+                margin-left: 26px;
+            }
+        }
+    }
+}
