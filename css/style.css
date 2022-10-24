@@ -1,4 +1,29 @@
 @charset "UTF-8";
+.yellow-button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9BCFFF), color-stop(0.01%, #FFF383), to(#FFC700));
+  background: -o-linear-gradient(top, #9BCFFF 0%, #FFF383 0.01%, #FFC700 100%);
+  background: linear-gradient(180deg, #9BCFFF 0%, #FFF383 0.01%, #FFC700 100%);
+  -webkit-box-shadow: 0px 4px 0px #C89C00;
+          box-shadow: 0px 4px 0px #C89C00;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 32px;
+  color: #6A5300;
+  -webkit-transition: all 0.08s ease-in-out;
+  -o-transition: all 0.08s ease-in-out;
+  transition: all 0.08s ease-in-out;
+}
+.yellow-button:active {
+  -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+          transform: translateY(4px);
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+}
+
 .wrapper-1170 {
   max-width: 1170px;
   margin: 0 auto;
@@ -81,8 +106,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Philosopher";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/philosopher-v19-latin_cyrillicphilosopher-v19-latin_cyrillic-regular.eot"); /* IE9 Compat Modes */
-  src: local(""), url("../fonts/philosopher-v19-latin_cyrillicphilosopher-v19-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/philosopher-v19-latin_cyrillicphilosopher-v19-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/philosopher-v19-latin_cyrillicphilosopher-v19-latin_cyrillic-regular.woff") format("woff"), url("../fonts/philosopher-v19-latin_cyrillicphilosopher-v19-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/philosopher-v19-latin_cyrillicphilosopher-v19-latin_cyrillic-regular.svg#Philosopher") format("svg"); /* Legacy iOS */
+  src: url("../fonts/philosopher-v19-latin_cyrillic/philosopher-v19-latin_cyrillic-regular.eot"); /* IE9 Compat Modes */
+  src: local(""), url("../fonts/philosopher-v19-latin_cyrillic/philosopher-v19-latin_cyrillic-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/philosopher-v19-latin_cyrillic/philosopher-v19-latin_cyrillic-regular.woff2") format("woff2"), url("../fonts/philosopher-v19-latin_cyrillic/philosopher-v19-latin_cyrillic-regular.woff") format("woff"), url("../fonts/philosopher-v19-latin_cyrillic/philosopher-v19-latin_cyrillic-regular.ttf") format("truetype"), url("../fonts/philosopher-v19-latin_cyrillic/philosopher-v19-latin_cyrillic-regular.svg#Philosopher") format("svg"); /* Legacy iOS */
 }
 /* roboto-regular - latin_cyrillic */
 @font-face {
@@ -117,20 +142,30 @@ h1, h2, h3, h4, h5, h6 {
   src: local(""), url("../fonts/roboto-v30-latin_cyrillic/roboto-v30-latin_cyrillic-700.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-v30-latin_cyrillic/roboto-v30-latin_cyrillic-700.woff2") format("woff2"), url("../fonts/roboto-v30-latin_cyrillic/roboto-v30-latin_cyrillic-700.woff") format("woff"), url("../fonts/roboto-v30-latin_cyrillic/roboto-v30-latin_cyrillic-700.ttf") format("truetype"), url("../fonts/roboto-v30-latin_cyrillic/roboto-v30-latin_cyrillic-700.svg#Roboto") format("svg"); /* Legacy iOS */
 }
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 100%;
   height: 60px;
+  margin-top: 9px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
   color: #202020;
-  margin-top: 9px;
+}
+.header__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1170px;
+  height: 100%;
+  margin: 0 auto;
 }
 .header .logo {
   -ms-flex-item-align: start;
@@ -163,27 +198,108 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-item-align: end;
       align-self: flex-end;
   font-family: "Roboto";
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  font-size: 18px;
   line-height: 21px;
   color: #202020;
 }
 .header .nav .phone-number::before {
   content: "";
-  background: url(../img/header/phone-logo.svg) no-repeat 0 0/contain;
   display: inline-block;
   height: 16px;
   width: 16px;
   margin-right: 10px;
+  background: url(../img/header/phone-logo.svg) no-repeat 0 0/contain;
 }
 .header .nav .phone-number::after {
   content: "Ежедневно 9:00 – 22:00";
   display: block;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 15px;
-  color: #EFEFEF;
   margin-top: 8px;
   margin-left: 26px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #7D808A;
+}
+
+.wrapper-intro {
+  position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.intro {
+  position: relative;
+  height: 950px;
+  padding-top: 70px;
+  background: url(../img/intro/background-intro.webp) no-repeat;
+}
+.intro__description {
+  display: grid;
+  gap: 0px 0px;
+  grid-template-areas: "title title" "line subtitle" "button button";
+  max-width: 613px;
+  margin-top: 88px;
+}
+.intro__title {
+  grid-area: title;
+  font-family: "Philosopher";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 57px;
+  line-height: 107%;
+}
+.intro__line {
+  width: 26px;
+  height: 1px;
+  margin-top: calc(1em + 40px);
+  background-color: #8F8F8F;
+}
+.intro__subtitle {
+  grid-area: subtitle;
+  margin-top: 40px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  color: #646464;
+}
+.intro__button {
+  grid-area: button;
+  width: 270px;
+  height: 70px;
+  margin-top: 42px;
+  text-transform: uppercase;
+}
+.intro__horse-big {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.intro__birds {
+  position: absolute;
+  top: 0;
+  right: -150px;
+  width: 275px;
+}
+.intro__flower-left {
+  position: absolute;
+  left: 0;
+  bottom: 70px;
+  z-index: 2;
+  height: 435px;
+}
+.intro__flower-right {
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+  z-index: 2;
+  height: 632px;
+}
+.intro__clouds {
+  position: absolute;
+  bottom: 90px;
+  width: 100%;
 }

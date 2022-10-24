@@ -1,7 +1,12 @@
 .header{
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
     height: 60px;
+    margin-top: 9px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
 
     font-family: 'Roboto';
     font-style: normal;
@@ -10,8 +15,15 @@
     line-height: 15px;
     color: $colBlack;
 
-    margin-top: 9px;
-    
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        
+        width: 1170px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
     .logo{
         align-self: flex-start;
     }
@@ -23,8 +35,8 @@
         &__items{
             display: flex;
             justify-content: space-between;
-            width: 428px;
 
+            width: 428px;
             margin-right: 58px;
         }
         &__link{
@@ -36,30 +48,33 @@
             align-self: flex-end;
             
             font-family: 'Roboto';
+            font-size: 18px;
             font-style: normal;
             font-weight: 700;
-            font-size: 18px;
             line-height: 21px;
             color: $colBlack;
 
             &::before{
                 content: "";
-                background: url(../img/header/phone-logo.svg) no-repeat 0 0/contain;
                 display: inline-block;
+
                 height: 16px;
                 width: 16px;
                 margin-right: 10px;
+
+                background: url(../img/header/phone-logo.svg) no-repeat 0 0/contain;
             }
             &::after{
                 content: "Ежедневно 9:00 – 22:00";
                 display: block;
-                font-weight: 400;
-                font-size: 13px;
-                line-height: 15px;
-                color: $colLightGrey;
 
                 margin-top: 8px;
                 margin-left: 26px;
+
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 15px;
+                color: #7D808A;
             }
         }
     }
